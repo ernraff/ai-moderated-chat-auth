@@ -38,6 +38,7 @@ JWT_SECRET=your_secret_key
 ```
 
 4. Start the application:
+
 Start the backend:
 ```
 cd backend
