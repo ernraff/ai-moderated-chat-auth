@@ -1,43 +1,62 @@
 # AI-Moderated Chat App - Login System
 
-This repository contains the authentication system for a real-time AI-moderated chat application. It includes user authentication, session management, and authorization.
+This repository contains the authentication system for a real-time AI-moderated chat application. It is built using the **MERN stack** and designed for **local development**.
 
 ## Features
 
-- User authentication with JWT and password hashing (bcrypt/Argon2)
-- OAuth support (Google, GitHub, etc.)
-- Session management with HTTP-only cookies
-- Role-based access control (RBAC)
-- Rate limiting for security
-- RESTful API or GraphQL support
+- User authentication with **JWT** and **bcrypt** for password hashing
+- Session management with **HTTP-only cookies**
+- **MongoDB** for user data storage
+- Role-based access control (RBAC) *(future)*
+- Basic **rate limiting** for security
+- API built with **Express.js** (Node.js backend)
+- React frontend *(to be implemented later)*
 
 ## Tech Stack
 
-| Component   | Example Choices |
-|------------|----------------|
-| Backend    | Node.js (Express)  |
-| Database   | MongoDB |
-| Auth       | OAuth2 |
-| Frontend   | React |
+| Component  | Technology |
+|------------|------------|
+| Backend    | Node.js, Express.js |
+| Database   | MongoDB (local instance) |
+| Auth       | JWT for authentication, bcrypt for password hashing |
+| Frontend   | React (to be implemented) |
 
 ## Installation
 
-1. Clone the repository:
-```
-   git clone https://github.com/yourusername/ai-chat-auth.git
-   cd ai-chat-auth
-```
-2. Install dependencies:
-```
-npm install
+### 1. Clone the repository:
+```sh
+git clone https://github.com/yourusername/chat-auth-local.git
+cd chat-auth-local
 ```
 
-API Endpoints
----------|-----------|-------------|
-| Method	| Endpoint	| Description |
-| POST	| /api/auth/signup	| Register a new user |
-| POST	| /api/auth/login	| Log in and receive a JWT token |
-| GET	| /api/auth/user	| Retrieve authenticated user data |
-| POST	| /api/auth/logout	| Log out and clear session |
+3. Set up environment variables:
+Create a .env file in the backend directory:
+```
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/chat-auth
+JWT_SECRET=your_secret_key
+```
 
+4. Start the application:
+Start the backend:
+```
+cd backend
+npm run dev
+```
+Start the frontend (if applicable):
+```
+cd frontend
+npm start
+```
 
+## Notes
+- This project is for local development only and is not configured for deployment.
+- A MongoDB instance is required (run mongod locally or use MongoDB Atlas).
+- OAuth support (Google, GitHub, etc.) is optional and not yet implemented.
+- The frontend is not yet complete but will use React.
+
+## Future Plans
+- Implement frontend authentication UI (React)
+- Add user roles (e.g., admin, moderator)
+- Password reset functionality
+- WebSocket support for real-time auth
