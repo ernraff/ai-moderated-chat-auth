@@ -15,11 +15,10 @@ This repository contains the authentication system for a real-time AI-moderated 
 
 | Component   | Example Choices |
 |------------|----------------|
-| Backend    | Node.js (Express) / Python (FastAPI, Flask, Django) |
-| Database   | PostgreSQL / MongoDB / Firebase Firestore |
-| Auth       | JWT, OAuth2 (Google, GitHub, etc.) |
-| Frontend   | React / Next.js / Vue.js |
-| Deployment | Docker + AWS / Vercel / Firebase |
+| Backend    | Node.js (Express)  |
+| Database   | MongoDB |
+| Auth       | OAuth2 |
+| Frontend   | React |
 
 ## Installation
 
@@ -34,15 +33,11 @@ npm install
 ```
 
 API Endpoints
-------------------------------------
+---------|-----------|-------------|
 | Method	| Endpoint	| Description |
---------------------------------------------------
 | POST	| /api/auth/signup	| Register a new user |
-------------------------------------------------------------
 | POST	| /api/auth/login	| Log in and receive a JWT token |
-------------------------------------------------------------
 | GET	| /api/auth/user	| Retrieve authenticated user data |
----------------------------------------------------------
 | POST	| /api/auth/logout	| Log out and clear session |
 
 
